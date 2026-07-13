@@ -1,0 +1,66 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[left=0.75in,right=0.75in,top=0.6in,bottom=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Color definitions
+\definecolor{darkblue}{RGB}{0,0,139}
+
+% Custom commands
+\newcommand{\entry}[4]{
+  \noindent \textbf{#1} \hfill #2 \\
+  \textit{#3} \hfill #4
+}
+
+\newcommand{\project}[3]{
+  \noindent \textbf{#1} | \textit{#2} \hfill #3
+}
+
+\titleformat{\section}
+  {\large\bfseries\uppercase}
+  {}{0em}
+  {}[\titlerule]
+
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\pagestyle{empty}
+
+% Header
+\begin{center}
+    {\Huge \textbf{NAME}} \\
+    \vspace{2mm}
+    \href{mailto:EMAIL}{EMAIL} | PHONE \\
+    EDUCATION\_SHORT
+\end{center}
+
+\vspace{-4mm}
+
+% Experience Section
+\section{Experience}
+
+% Repeat \entry block per job. Use \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt] ... \end{itemize}
+% \entry{Company}{Location}{Title}{Dates}
+
+% Projects Section
+\section{Projects}
+
+% Repeat \project block per project.
+% \project{Project Name}{Context}{Dates}
+
+% Education Section
+\section{Education}
+% \textbf{School} \hfill Location \\
+% Degree \hfill Dates
+
+% Skills Section
+\section{Technical Skills}
+% \begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt]
+%   \item \textbf{Category:} items
+% \end{itemize}
+
+\end{document}
