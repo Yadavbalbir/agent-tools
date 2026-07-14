@@ -1,0 +1,49 @@
+name: PR Reviewer Guidance
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, ready_for_review]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  post-review-guidance:
+    if: ${{ github.event.pull_request.draft == false }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Load reviewer skill
+        id: skill
+        run: |
+          echo "content<<EOF" >> "$GITHUB_OUTPUT"
+          cat .github/skills/pr-reviewer/SKILL.md >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+      - name: Post sticky PR reviewer guidance
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-reviewer-skill
+          message: |
+            ## PR Reviewer Skill Guidance
+
+            This PR follows the repository review policy in `.github/skills/pr-reviewer/SKILL.md`.
+
+            ### Reviewer Checklist
+            - [ ] Change is understandable and focused
+            - [ ] Paths and file references are valid
+            - [ ] Related docs updated
+            - [ ] No obvious security/privacy risk introduced
+            - [ ] Follows repository conventions and templates
+
+            <details>
+            <summary>Full skill</summary>
+
+            ```text
+            ${{ steps.skill.outputs.content }}
+            ```
+
+            </details>
