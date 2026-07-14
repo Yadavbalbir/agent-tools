@@ -1,5 +1,5 @@
 ---
-name: resume-to-latex-template
+name: resume-formatter
 description: Converts any resume (PDF, Word/.docx, plain text, or a mix of these) into the user's personal LaTeX resume template and returns a freshly compiled PDF. Use this skill whenever the user shares a resume — their own or someone else's — and asks to reformat it, "convert it," "put it in my template," "make it match my format," or similar, even if they don't say "LaTeX" explicitly. Also use it whenever they ask to add, remove, or modify specific bullet points, entries, or sections on a resume they want output in this template. Each run is a fresh one-shot conversion — it does not carry state between conversations. Do NOT use this skill for generic resume writing/critique requests that don't involve producing a formatted output document.
 ---
 
