@@ -11,6 +11,7 @@ This repository is designed to make it easy to:
 
 - `skills/`: Home for all skill folders
 - `skills/resume-formatter-skill/`: Converts resumes into a polished LaTeX-based format
+- `skills/msft-itr-filing-skill/`: Guides Microsoft India employees through document-driven ITR filing with RSU/ESPP and foreign asset workflows
 - `docs/`: Usage and integration guides
 - `.github/`: Issue templates and pull request standards
 

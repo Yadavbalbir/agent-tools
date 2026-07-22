@@ -68,3 +68,14 @@ If a tool has no filesystem access, provide path-aware snippets directly in prom
 Use case:
 - Input: resume files (PDF, DOCX, or text) and optional edit instructions
 - Output: formatted resume source and compiled PDF per skill contract
+
+## Example: msft-itr-filing
+
+- Skill definition: `skills/msft-itr-filing-skill/SKILL.md`
+- Reference docs: `skills/msft-itr-filing-skill/references/`
+- Helper script: `skills/msft-itr-filing-skill/scripts/extract_pdf.py`
+- Packaged artifact: `skills/msft-itr-filing-skill/msft-itr-filing.zip`
+
+Use case:
+- Input: Form 16/12BA, AIS/TIS/26AS, Fidelity and broker statements, and filing-year metadata
+- Output: validated, step-wise ITR filing workflow with reconciled calculations and portal mapping
